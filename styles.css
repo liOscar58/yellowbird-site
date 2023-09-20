@@ -198,9 +198,10 @@ section .header{
 
 
 footer{
+    max-width: 1200px;
     position: relative;
     display: grid;
-    grid-template-columns: 400px repeat(2, 1fr);
+    grid-template-columns: 600px repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -211,7 +212,7 @@ footer .column .logo{
 
 footer .column p{
     color: #ccc;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 footer .column .socials{
@@ -231,8 +232,8 @@ footer .column .socials a{
 
 footer .column .socials a:hover{
     color: #fff;
-    background-color: #1d4ed8;
-    border-color: #1d4ed8;
+    background-color: rgb(244, 255, 88);
+    border-color: rgb(244, 255, 88);
 }
 
 footer .column h4{
@@ -246,11 +247,12 @@ footer .column > a{
     display: block;
     color: #ccc;
     margin-bottom: 1rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
 
 footer .column > a:hover{
-    color: #1d4ed8;
+    color: rgb(244, 255, 88);
 }
 
 .copyright{
