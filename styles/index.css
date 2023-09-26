@@ -271,6 +271,43 @@ footer .column > a:hover{
     text-align: center;
 }
 
+.about{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.about .content{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.abouttxt h1{
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;   
+}
+.abouttxt h5{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 25px;  
+    letter-spacing: 2px; 
+}
+
+.abouttxt p{
+    color: #fff;
+    font-weight: 500;
+    font-family: Lato;
+    margin-bottom: 2rem;
+}
+.about img{
+    position: relative;
+    size: 20%;
+}
+
 @media (width < 900px){
     .nav-links{
         display: none;
