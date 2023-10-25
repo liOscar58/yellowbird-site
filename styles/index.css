@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Monoton&family=Poppins&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -23,26 +24,27 @@ body{
     background-color: rgb(20, 20, 20);
 }
 
-nav{
+nav {
     max-width: 1200px;
     margin: auto;
     padding: 2rem 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Change this to space-between */
     gap: 2rem;
 }
 
-.nav-logo{
+.nav-logo {
     max-width: 100px;
 }
 
-.nav-links{
+.nav-links {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 3rem;
 }
+/* Add a media query for smaller screens */
 
 .link a{
     position: relative;
@@ -66,45 +68,6 @@ nav{
 
 }
 
-.btn {
-    background: #fffcd5;
-    box-shadow: 4px 4px rgb(244, 255, 88), 9px 9px #151515;
-    color: #151515;
-    border: solid 2px #151515;
-    font-family: Lato, sans-serif;
-    padding: 0.7rem 1rem;
-    font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    cursor: pointer;
-    overflow: hidden;
-    transition-delay: 0s !important;
-  }
-  .btn::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    width: 0%;
-    height: 100%;
-    background: #151515;
-    z-index: -1;
-    transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  }
-  .btn:hover::before {
-    width: 100%;
-    left: 0;
-    right: unset;
-  }
-  .btn:hover {
-    box-shadow: 0 0 rgb(244, 255, 88), 0 0 #151515;
-    color: white;
-  }
-
-
 .container{
     max-width: 1200px;
     margin: auto;
@@ -116,6 +79,16 @@ nav{
     box-shadow: 0 0 1000px 50px rgb(244, 255, 88);
     z-index: -100;
 }
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+      text-align: center; /* Center the text within the links */
+    }
+  
+    .nav-links li {
+      margin: 1rem; /* Add spacing between the vertical links */
+    }
+  }
 
 header{
     position: relative;
@@ -149,6 +122,8 @@ header .content p{
 }
 
 header .image{
+    max-width: 90%;
+    height: auto;
     position: relative;
 }
 
