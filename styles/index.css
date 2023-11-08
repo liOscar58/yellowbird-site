@@ -94,7 +94,7 @@ body{
 }
 
 .image-with-text {
-    max-width: 50%;
+    max-width: 40%;
     margin: 0 auto;
     margin-bottom: 10px; /* Reduce the margin between image-with-text and the following element */
 }
@@ -102,7 +102,7 @@ body{
 
 
   .image-with-text img {
-    min-width: 180px;
+    min-width: 150px;
     height: auto;
     float: left;
     margin: 0 20px 0 0;
@@ -110,7 +110,7 @@ body{
   .image-with-text p {
     margin-top: 10px; /* Reduce the top margin for the paragraph */
     text-align: justify;
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
 }
 
@@ -118,18 +118,18 @@ body{
 
 
   .image-with-text-2 {
-    max-width: 50%;
+    max-width: 40%;
     margin: 0 auto;
   }
   .image-with-text-2 img {
-    min-width: 180px;
+    min-width: 150px;
     height: auto;
     float: right;
     margin: 0 0 0 20px;
   }
   .image-with-text-2 p {
     text-align: justify;
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
   }
 
