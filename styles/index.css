@@ -83,15 +83,24 @@ body{
   .centered-content h4 {
     font-size: larger;
     color: #fff;
-    margin: 0; /* Remove default margins to control spacing */
+    margin: 5px 0px 80px; /* Remove default margins to control spacing */
   }
 
+  .centered-heading {
+    text-align: center;
+    font-size: 38px; /* Adjust the font size as needed */
+    color: #fff; /* White color */
+    margin-bottom: 0; /* Remove the margin between centered-heading and image-with-text */
+}
 
-  .image-with-text {
+.image-with-text {
     max-width: 50%;
     margin: 0 auto;
-    margin-bottom: 20px;
-  }
+    margin-bottom: 10px; /* Reduce the margin between image-with-text and the following element */
+}
+
+
+
   .image-with-text img {
     min-width: 180px;
     height: auto;
@@ -99,11 +108,11 @@ body{
     margin: 0 20px 0 0;
   }
   .image-with-text p {
-    margin-top: 100px;
+    margin-top: 10px; /* Reduce the top margin for the paragraph */
     text-align: justify;
     font-size: 20px;
     color: #fff;
-  }
+}
 
 
 
