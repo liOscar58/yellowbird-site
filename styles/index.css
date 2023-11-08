@@ -83,7 +83,7 @@ body{
   .centered-content h4 {
     font-size: larger;
     color: #fff;
-    margin: 5px 0px 80px; /* Remove default margins to control spacing */
+    margin: 5px 0px 150px; /* Remove default margins to control spacing */
   }
 
   .centered-heading {
@@ -94,7 +94,7 @@ body{
 }
 
 .image-with-text {
-    max-width: 40%;
+    max-width: 50%;
     margin: 0 auto;
     margin-bottom: 10px; /* Reduce the margin between image-with-text and the following element */
 }
@@ -110,7 +110,7 @@ body{
   .image-with-text p {
     margin-top: 10px; /* Reduce the top margin for the paragraph */
     text-align: justify;
-    font-size: 18px;
+    font-size: 20px;
     color: #fff;
 }
 
@@ -118,7 +118,7 @@ body{
 
 
   .image-with-text-2 {
-    max-width: 40%;
+    max-width: 50%;
     margin: 0 auto;
   }
   .image-with-text-2 img {
@@ -129,7 +129,7 @@ body{
   }
   .image-with-text-2 p {
     text-align: justify;
-    font-size: 18px;
+    font-size: 20px;
     color: #fff;
   }
 
@@ -276,7 +276,7 @@ section .header{
   }
   
   .features .card p {
-    padding-top: 20px; /* Add space above the text */
+    padding-top: 100px; /* Add space above the text */
     color: #ccc;
     margin-bottom: 0.5rem;
   }
@@ -379,6 +379,7 @@ input, textarea{
     color: #fff;
     background: transparent;
     font-size: 15px;
+    border-radius: 15px;
 }
 
 label{
@@ -392,16 +393,30 @@ label{
     transition: 0.2s ease;
 }
 
-.submit_btn{
+.submit_btn {
+  padding: 10px 0;
+  color: yellow;
+  outline: none;
+  background: transparent;
+  border: 1px solid yellow;
+  width: 160px;
+  cursor: pointer;
+  border-radius: 15px;
+  float: right; /* Float the button to the right */
+  margin-left: auto; /* Center the button horizontally within its container */
+}
+
+/*
+.submit_btn 
     padding: 10px 0;
     color: #fff;
     outline: none;
-    background: transparent;
+    background: yellow; 
     border: 1px solid #fff;
     width: 100%;
     cursor: pointer;
 
-}
+*/
 
 input:focus~label,input:valid~label{
     top: -35px;
@@ -435,6 +450,17 @@ textarea:focus~label,textarea:valid~label{
     margin-top: 230px;
 }
 
+#contact {
+  margin-top: 60px;
+}
+
+#tteam{
+  margin-top: 60px;
+}
+
+#tech{
+  margin-top: 60px;
+}
 
 @media (width < 900px){
     .nav-links{
