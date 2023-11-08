@@ -5,129 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
+<nav class="navbar">
+    <ul>
+        <li class="link"><a href="index.html">Home</a></li>
+        <li class="link"><a href="#about">About</a></li>
+        <li class="link"><a href="#tech">Technology</a></li>
+        <li class="link"><a href="#tteam">Team</a></li>
+        <li class="link"><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <nav>
-        <div class="nav-logo">
-            <a href="#">
-                <img src="imgs/logo.png">
-            </a>
-
-        </div>
-
-        <ul class="nav-links">
-            <li class="link"><a href="index.html">Home</a></li>
-            <li class="link"><a href="project.html">Project</a></li>
-            <li class="link"><a href="team.html">Team</a></li>
-            <li class="link"><a href="form.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <header class="container">
-        <div class="content">
-            <span class="blur"></span>
-            <span class="blur"></span>
-            <h1>YellowBird <span>Diagnostics</span></h1>
-            <p>Specializes in biomedical imaging solutions across commonly used clinical imaging technologies. Our imaging solutions aim to empower physicians with actionable diagnostic 
-                information earlier in the onset of disease, seamlessly integrating into existing clinical workflows.</p>
-
-        </div>
-        <div class="image">
-            <img src="imgs/banner.jpg" >
+<section id="home">
+    <header class="container image-container">
+        <div class="centered-content">
+            <img src="imgs/yellowbird.png">
+            <h4>Providing Clinicians the True Picture of Disease</h4>
         </div>
     </header>
+</section>
 
-    <section class="container">
-        <h2 class="header">Project</h2>
+<section id="about">
+
+    <div class="image-with-text">
+        <img src="imgs/pill.png" alt="Image Description">
+        <p>Yellowbird Diagnostics, Inc. specializes in biomedical imaging solutions across commonly used clinical imaging techniques.​
+            Our imaging dyes report on early molecular changes in the body, allowing clinicians to identify otherwise invisible disease hallmarks prior to the anatomical changes often in later​ stage disease. 
+        </p>
+      </div>
+
+      <div class="image-with-text-2">
+        <img src="imgs/pill2.png" alt="Image Description">
+        <p>These dyes provide actionable and earlier diagnostic while seamlessly integrating into existing clinical workflows.
+            Equipping clinicians with Yellowbird’s diagnostic tools can identify disease earlier, which can lead to more effective medical interventions and overall improved patient outcomes.
+        </p>
+      </div>
+
+  </section>
+
+    <section class="container" id="tech">
+        <h2 class="header">Technology</h2>
         <div class="features">
             <div class="card">
-                <h4>Title</h4>
-                <span><div class="image">
-                    <img src="imgs/place.jpg" alt="">
-                </div></span>
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-                </p>
+                <h4>indistinguishable Signal</h4>
+                <div class="image">
+                    <img src="imgs/project_hover.png" alt="Image 1">
+                    <img src="imgs/project_img.png" alt="Image 1 Alt" class="hover-image">
+                </div>
+                <p class="default-text">Cannot discern healthy from disease state</p>
+                <p class="hover-text">Less effective treatment</p>
             </div>
+    
             <div class="card">
-                <h4>Title</h4>
-                <span><div class="image">
-                    <img src="imgs/place.jpg" alt="">
-                </div></span>
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-                </p>
+                <h4>Late Detections</h4>
+                <div class="image">
+                    <img src="imgs/project_hover.png" alt="Image 2">
+                    <img src="imgs/project_img.png" alt="Image 2 Alt" class="hover-image">
+                </div>
+                <p class="default-text">Less effective treatment</p>
+                <p class="hover-text">Kidney functional mapping without using metal</p>
             </div>
+    
             <div class="card">
-                <h4>Title</h4>
-                <span><div class="image">
-                    <img src="imgs/place.jpg" alt="">
-                </div></span>
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-                </p>
+                <h4>No Diagnostic Solution</h4>
+                <div class="image">
+                    <img src="imgs/project_hover.png" alt="Image 3">
+                    <img src="imgs/project_img.png" alt="Image 3 Alt" class="hover-image">
+                </div>
+                <p class="default-text">No current diagnostic exists</p>
+                <p class="hover-text">Providing biomolecular information where none existed before.</p>
             </div>
-            
         </div>
     </section>
+  
+    <section class="container" id="tteam">
+    <div class="container">
+        <div class="header">
+            <h1>The Team</h1>
+        </div>
+        <div class="sub-container">
+            <div class="teams">
+                <img src="imgs/nick_2.jpg" alt="">
+                <div class="name">Nicholas D. Calvert</div>
+                <div class="desig">CEO (PhD Candidate)</div>
+                <div class="about">Synthetic chemistry, biochemistry, image analysis</div>
 <!--
-    <section class="about">
-        <div class="content">
-            <img src="imgs/20230201_111942.jpg">
-            <div class="abouttxt">
-                <h1>About Us</h1>
-                <h5>Biomedical Startup in the Heart of uOttawa</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-                    deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-    </section>
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
 -->
-
-    <footer class="container">
-        <span class="blur"></span>
-        <span class="blur"></span>
-        <div class="column">
-            <div class="logo">
-                <img src="imgs/logo.png">
             </div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <div class="socials">
-                <a href="https://www.linkedin.com/company/yellowbirddiagnostics/about/"><i class="ri-linkedin-line"></i></a>
-                <a href="#"><i class="ri-twitter-line"></i></a>
-            </div>
-        </div>
 
-        <div class="column">
-            <h4>About Us</h4>
-            <a href="#">The Team</a>
-            <a href="#">Sponsors</a>
-            <a href="#">Job Openings</a>
+            <div class="teams">
+                <img src="imgs/adam_2.jfif" alt="">
+                <div class="name">Dr. Adam Shuhendler </div>
+                <div class="desig">CSO (Associate Professir & Canada Research Chair)</div>
+                <div class="about">20+ years in diagnostic imaging research</div>
+
+            </div>
+
+            <div class="teams">
+                <img src="imgs/nick_2.jpg" alt="">
+                <div class="name">Alexia Kirby</div>
+                <div class="desig">(PhD Candidate)</div>
+                <div class="about">Biochemistry, Molecular biology, in vivo models of disease</div>
+            </div>
+
+            <div class="teams">
+                <img src="imgs/hibbert.jpg" alt="">
+                <div class="name">Dr. Ben Hibbert</div>
+                <div class="desig">(interventional Cardiologist and Assistant Professor)</div>
+                <div class="about">Biomarker development, high-volume clinical operator</div>
+            </div>
+            </div>
+
         </div>
-        <div class="column">
-            <h4>Contact</h4>
-            <a href="#">Contact Us</a>
-            <a href="#">Privicy Policy</a>
-            <a href="#">Terms & Conditions</a>
-        </div>
-    </footer>
+    </div>
+    </section>
+
+<section id="contact">
+    <div class="hero">
+        <form>
+            <div class="row">
+                <div class="input-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="number" required>
+                    <label for="number">Phone no.</label>
+                </div>
+
+            </div>
+            <div class="input-group">
+                <input type="text" id="email" required>
+                <label for="email">Email Id</label>
+            </div>
+            <div class="input-group">
+                <textarea id="message" rows="8" required></textarea>
+                <label for="message">Your message</label>
+            </div>
+            <button class="submit_btn" type="submit">SUBMIT</button>
+
+        </form>
+
+
+    </div>
+
+</section>
+
 
     <div class="copyright">
         Copyright © 2023 YellowBird Diagnostics. All Rights Reserved.
     </div>
-
-
-
-    <script src="scripts.js"></script>
 </body>
 </html>

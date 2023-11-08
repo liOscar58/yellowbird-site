@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Monoton&family=Poppins&display=swap');
+html {
+    scroll-behavior: smooth;
+}
 
 *{
     padding: 0;
@@ -9,10 +12,6 @@
 
 }
 
-img{
-    width: 100%;
-    display: flex;
-}
 
 a{
     text-decoration: none;
@@ -21,74 +20,124 @@ a{
 
 body{
     font-family: Lato, sans-serif;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(0, 0, 0);
 }
 
-nav {
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem 1rem;
+.navbar {
+    background-color: black;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center; /* Change this to space-between */
-    gap: 2rem;
+    position: sticky;
+    top: 0;
+    height: 40px;
+    z-index: 100; /* Set a higher z-index value */
 }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbar li {
+    margin: 0 15px; /* Adjust spacing as needed */
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Style the links on hover (optional) */
 
-.nav-logo {
-    max-width: 100px;
-}
-
-.nav-links {
+  .nav-links {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 3rem;
 }
-/* Add a media query for smaller screens */
+.navbar-links a:hover {
+    text-decoration: underline;
+}
 
-.link a{
-    position: relative;
-    padding-bottom: 0.75rem;
+/* Center the content within the container */
+.image-container {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+  }
+  
+  /* Style for the container div that holds the image and h3 */
+  .centered-content {
+    text-align: center; /* Center the text horizontally */
+  }
+  
+  /* Style for the image */
+  .centered-content img {
+    display: block; /* Make the image a block element */
+  }
+  
+  /* Style for the h3 text */
+  .centered-content h4 {
+    font-size: larger;
     color: #fff;
-}
+    margin: 0; /* Remove default margins to control spacing */
+  }
 
-.link a::after{
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 0px;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(244, 255, 88);
-    transition: all 0.3s ease;
-}
 
-.link a:hover::after{
-    width: 70%;
+  .image-with-text {
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .image-with-text img {
+    min-width: 180px;
+    height: auto;
+    float: left;
+    margin: 0 20px 0 0;
+  }
+  .image-with-text p {
+    margin-top: 100px;
+    text-align: justify;
+    font-size: 20px;
+    color: #fff;
+  }
 
-}
+
+
+
+  .image-with-text-2 {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  .image-with-text-2 img {
+    min-width: 180px;
+    height: auto;
+    float: right;
+    margin: 0 0 0 20px;
+  }
+  .image-with-text-2 p {
+    text-align: justify;
+    font-size: 20px;
+    color: #fff;
+  }
+
+
+
+
+
+
+
+
+
 
 .container{
     max-width: 1200px;
     margin: auto;
-    padding: 5rem 2rem;
+    padding: 2rem;
 }
-
-.blur{
-    position: absolute;
-    box-shadow: 0 0 1000px 50px rgb(244, 255, 88);
-    z-index: -100;
-}
-
-@media screen and (max-width: 768px) {
-    .nav-links {
-      text-align: center; /* Center the text within the links */
-    }
-  
-    .nav-links li {
-      margin: 1rem; /* Add spacing between the vertical links */
-    }
-  }
 
 header{
     position: relative;
@@ -143,7 +192,8 @@ section .header{
 }
 
 .features .card{
-    background-color: #27272a;
+    text-align: center;
+    background-color: transparent;
     padding: 1rem;
     border: 2px solid transparent;
     border-radius: 15px;
@@ -160,6 +210,7 @@ section .header{
 }
 
 .features .card h4{
+    padding-bottom: 10px;
     margin-bottom: 0.5rem;
     color: #fff;
     font-size: 1.2rem;
@@ -167,74 +218,202 @@ section .header{
 }
 
 .features .card p{
+    text-align: center;
     color: #ccc;
     margin-bottom: 0.5rem;
 }
-
-
-footer{
-    max-width: 1200px;
-    position: relative;
-    display: grid;
-    grid-template-columns: 600px repeat(2, 1fr);
-    gap: 2rem;
-}
-footer .a{
-    text-align: left;
-}
-footer .p{
-    text-align: left;
-}
-footer .column .logo{
-    max-width: 100px;
-    margin-bottom: 2rem;
+.features .card .image img{
+    align-items: center;
+    max-width: 300px;
+    height: auto;
 }
 
-footer .column p{
+.features .card:hover{
+    transform: scale(1.1);
+}
+.features .card:hover .image img{
+    opacity: 0;
+}
+.features .card:hover .image img.hover-image{
+    opacity: 1;
+}
+.features .card .image img.hover-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  .features .card .default-text {
+    display: block;
+    opacity: 1;
+  }
+  
+  .features .card .hover-text {
+    display: none;
+    opacity: 0;
+  }
+  
+  .features .card:hover .default-text {
+
+    display: none;
+    opacity: 0;
+  }
+  
+  .features .card:hover .hover-text {
+    display: block;
+    opacity: 1;
+  }
+  
+  .features .card p {
+    padding-top: 20px; /* Add space above the text */
     color: #ccc;
-    margin-bottom: 1rem;
-}
+    margin-bottom: 0.5rem;
+  }
 
-footer .column .socials{
+  
+  .container {
+    text-align: center;
+  }
+  .name {
+    color: #fff;
+  }
+  .header {
+    padding-top: 30px;
+    color: #ffffff;
+    font-size: 20px;
+    margin: auto;
+    line-height: 50px;
+  }
+  
+  .sub-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: space-between; /* Distribute items evenly with space between */
+  }
+  
+  
+  .teams {
+    margin: 10px;
+    padding: 22px;
+    flex-basis: calc(25% - 20px); /* Set the flex basis to 25% of the container minus spacing */
+    cursor: pointer;
+    transition: 0.4s;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 12px;
+
+  }
+  
+  .teams img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .name {
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+  .desig {
+    font-style: italic;
+    color: #888;
+  }
+  
+  .about {
+    margin: 20px 0;
+    font-weight: lighter;
+    color: #dfdfdf;
+  }
+
+  @media screen and (max-width: 600px) {
+    .teams {
+      flex-basis: calc(50% - 20px); /* Adjust for smaller screens, 2 items per row */
+    }
+  }
+
+
+
+  .hero{
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+
+
+}
+form{
+    width: 90%;
+    max-width: 600px;
+
 }
 
-footer .column .socials a{
-    color: #ccc;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    font-size: 1.25rem;
-    border-radius: 100%;
-    transition: all 0.3s ease;
+.input-group{
+    margin-bottom: 30px;
+    position: relative;
+
+}
+
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    font-size: 15px;
+}
+
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #fff;
+    cursor: text;
+    transition: 0.2s ease;
+}
+
+.submit_btn{
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 100%;
+    cursor: pointer;
+
+}
+
+input:focus~label,input:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+
+textarea:focus~label,textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row .input-group{
+    flex-basis: 48%;
     
-}
 
-footer .column .socials a:hover{
-    color: #fff;
-    background-color: rgb(244, 255, 88);
-    border-color: rgb(244, 255, 88);
-}
-
-footer .column h4{
-    color: #fff;
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-footer .column > a{
-    display: block;
-    color: #ccc;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    text-align: left;
-}
-
-footer .column > a:hover{
-    color: rgb(244, 255, 88);
 }
 
 .copyright{
@@ -244,44 +423,9 @@ footer .column > a:hover{
     color: #fff;
     font-size: 0.8rem;
     text-align: center;
+    margin-top: 230px;
 }
 
-.about{
-    max-width: 1200px;
-    margin: auto;
-    padding: 5rem 2rem;
-}
-
-.about .content{
-    position: relative;
-    padding-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2rem;
-}
-.abouttxt h1{
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 20px;   
-}
-.abouttxt h5{
-    color: white;
-    font-size: 1.5rem;
-    margin-bottom: 25px;  
-    letter-spacing: 2px; 
-}
-
-.abouttxt p{
-    color: #fff;
-    font-weight: 500;
-    font-family: Lato;
-    margin-bottom: 2rem;
-}
-.about img{
-    position: relative;
-    size: 20%;
-}
 
 @media (width < 900px){
     .nav-links{

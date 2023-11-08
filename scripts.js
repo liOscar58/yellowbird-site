@@ -1,26 +1,41 @@
-function scrollToElement(elementSelector, instance = 0) {
-    // Select all elements that match the given selector
-    const elements = document.querySelectorAll(elementSelector);
-    // Check if there are elements matching the selector and if the requested instance exists
-    if (elements.length > instance) {
-        // Scroll to the specified instance of the element
-        elements[instance].scrollIntoView({ behavior: 'smooth' });
-    }
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
 }
 
-const link1 = document.getElementById("link1");
-const link2 = document.getElementById("link2");
-const link3 = document.getElementById("link3");
+// Get all the card elements
+const cards = document.querySelectorAll('.card');
 
-link1.addEventListener('click', () => {
-    scrollToElement('.header');
-});
+// Loop through each card
+cards.forEach(card => {
+  // Add a mouseover event listener to each card
+  card.addEventListener('mouseover', () => {
+    // Get the image element within the card
+    const image = card.querySelector('.image img');
+    
+    // Change the image source to the alt attribute
+    image.src = image.alt;
+  });
 
-link2.addEventListener('click', () => {
-    // Scroll to the second element with "header" class
-    scrollToElement('.header', 1);
-});
-
-link3.addEventListener('click', () => {
-    scrollToElement('.column');
+  // Add a mouseout event listener to each card
+  card.addEventListener('mouseout', () => {
+    // Get the image element within the card
+    const image = card.querySelector('.image img');
+    
+    // Change the image source back to the original source
+    image.src = image.getAttribute('src');
+  });
 });
