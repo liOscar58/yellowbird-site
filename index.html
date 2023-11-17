@@ -10,6 +10,9 @@
 </head>
 <body>
 <nav class="navbar">
+    <div class="logo">
+        <img src="imgs/bird_logo.png" alt="Logo" width="20" height="20">
+    </div>
     <ul>
         <li class="link"><a href="index.html">Home</a></li>
         <li class="link"><a href="#about">About</a></li>
@@ -22,7 +25,7 @@
 <section id="home">
     <header class="container image-container">
         <div class="centered-content">
-            <img src="imgs/yellowbird.png">
+            <img src="imgs/logo.png" id="logo" class="centered-image">
             <h4>Providing Clinicians the True Picture of Disease</h4>
         </div>
     </header>
@@ -31,14 +34,14 @@
 <section id="about">
     <h2 class="centered-heading">About YellowBird</h2>
     <div class="image-with-text">
-        <img src="imgs/pill.png" alt="Image Description">
+        <img src="imgs/About 1.png" alt="Image Description" width="150" height="auto">
         <p>Yellowbird Diagnostics, Inc. specializes in biomedical imaging solutions across commonly used clinical imaging techniques. O​ 
             ur imaging dyes report on early molecular changes in the body, allowing clinicians to identify otherwise invisible disease hallmarks prior to the anatomical changes often in later​ stage disease. 
         </p>
       </div>
 
       <div class="image-with-text-2">
-        <img src="imgs/pill2.png" alt="Image Description">
+        <img src="imgs/About 2.png" alt="Image Description" width="150" height="auto">
         <p>These dyes provide actionable and earlier diagnostic while seamlessly integrating into existing clinical workflows.
             Equipping clinicians with Yellowbird’s diagnostic tools can identify disease earlier, which can lead to more effective medical interventions and overall improved patient outcomes.
         </p>
@@ -52,8 +55,8 @@
             <div class="card">
                 <h4>indistinguishable Signal</h4>
                 <div class="image">
-                    <img src="imgs/project_hover.png" alt="Image 1">
-                    <img src="imgs/project_img.png" alt="Image 1 Alt" class="hover-image">
+                    <img src="imgs/Indistiguish.png" alt="Image 1">
+                    <img src="imgs/Indistinguish 2.png" alt="Image 1 Alt" class="hover-image">
                 </div>
                 <p class="default-text">Cannot discern healthy from disease state</p>
                 <p class="hover-text">Less effective treatment</p>
@@ -62,8 +65,8 @@
             <div class="card">
                 <h4>Late Detections</h4>
                 <div class="image">
-                    <img src="imgs/project_hover.png" alt="Image 2">
-                    <img src="imgs/project_img.png" alt="Image 2 Alt" class="hover-image">
+                    <img src="imgs/Late.png" alt="Image 2">
+                    <img src="imgs/Late 2.png" alt="Image 2 Alt" class="hover-image">
                 </div>
                 <p class="default-text">Less effective treatment</p>
                 <p class="hover-text">Kidney functional mapping without using metal</p>
@@ -72,8 +75,8 @@
             <div class="card">
                 <h4>No Diagnostic Solution</h4>
                 <div class="image">
-                    <img src="imgs/project_hover.png" alt="Image 3">
-                    <img src="imgs/project_img.png" alt="Image 3 Alt" class="hover-image">
+                    <img src="imgs/No Solution.png" alt="Image 3">
+                    <img src="imgs/No Solution 2.png" alt="Image 3 Alt" class="hover-image">
                 </div>
                 <p class="default-text">No current diagnostic exists</p>
                 <p class="hover-text">Providing biomolecular information where none existed before.</p>
@@ -84,11 +87,11 @@
     <section class="container" id="tteam">
     <div class="container">
         <div class="header">
-            <h1>The Team</h1>
+            <h2>The Team</h2>
         </div>
         <div class="sub-container">
             <div class="teams">
-                <img src="imgs/nick_2.jpg" alt="">
+                <img src="imgs/Nick.png" alt="">
                 <div class="name">Nicholas D. Calvert</div>
                 <div class="desig">CEO (PhD Candidate)</div>
                 <div class="about">Synthetic chemistry, biochemistry, image analysis</div>
@@ -103,7 +106,7 @@
             </div>
 
             <div class="teams">
-                <img src="imgs/adam_2.jfif" alt="">
+                <img src="imgs/Adam.jpg" alt="">
                 <div class="name">Dr. Adam Shuhendler </div>
                 <div class="desig">CSO (Associate Professir & Canada Research Chair)</div>
                 <div class="about">20+ years in diagnostic imaging research</div>
@@ -111,14 +114,14 @@
             </div>
 
             <div class="teams">
-                <img src="imgs/nick_2.jpg" alt="">
+                <img src="imgs/Alexia.jpg" alt="">
                 <div class="name">Alexia Kirby</div>
                 <div class="desig">(PhD Candidate)</div>
                 <div class="about">Biochemistry, Molecular biology, in vivo models of disease</div>
             </div>
 
             <div class="teams">
-                <img src="imgs/hibbert.jpg" alt="">
+                <img src="imgs/Ben.png" alt="">
                 <div class="name">Dr. Ben Hibbert</div>
                 <div class="desig">(interventional Cardiologist and Assistant Professor)</div>
                 <div class="about">Biomarker development, high-volume clinical operator</div>
@@ -129,26 +132,29 @@
     </div>
     </section>
 
-<section id="contact">
-    <div class="hero">
-        <form>
+    <section id="contact">
+        <div class="header2">
+            <h1>Contact Us</h1>
+        </div>
+        <div class="hero">
+            <form action="process_form.php" method="post">
             <div class="row">
                 <div class="input-group">
-                    <input type="text" id="name" required>
+                    <input type="text" name="name" id="name" required>
                     <label for="name">Your Name</label>
                 </div>
                 <div class="input-group">
-                    <input type="text" id="number" required>
+                    <input type="text" id="number" name="number" required>
                     <label for="number">Phone no.</label>
                 </div>
 
             </div>
             <div class="input-group">
-                <input type="text" id="email" required>
+                <input type="text" id="email" name="email" required>
                 <label for="email">Email Id</label>
             </div>
             <div class="input-group">
-                <textarea id="message" rows="8" required></textarea>
+                <textarea id="message" rows="8" name="message" required></textarea>
                 <label for="message">Your message</label>
             </div>
             <button class="submit_btn" type="submit">SUBMIT</button>
