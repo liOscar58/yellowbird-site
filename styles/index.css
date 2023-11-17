@@ -82,8 +82,6 @@ body{
   .centered-image {
     max-width: 750px; /* Set your desired maximum width in pixels */
     max-height: auto; /* Set your desired maximum height in pixels */
-    width: auto;
-    height: auto;
     margin: 0 auto; /* Center the image horizontally */
     display: block; /* Make the image a block element */
 }
@@ -127,9 +125,6 @@ body{
     font-size: 20px;
     color: #fff;
 }
-
-
-
 
   .image-with-text-2 {
     max-width: 50%;
@@ -236,10 +231,15 @@ section .header{
     color: #ccc;
     margin-bottom: 0.5rem;
 }
+.features .card .image {
+  position: relative;
+}
 .features .card .image img{
     align-items: center;
     max-width: 300px;
     height: auto;
+    position: relative;
+    
 }
 
 .features .card:hover{
@@ -250,6 +250,7 @@ section .header{
 }
 .features .card:hover .image img.hover-image{
     opacity: 1;
+    transition: opacity 0.3s ease;
 }
 .features .card .image img.hover-image {
     position: absolute;
@@ -425,17 +426,6 @@ label{
   margin-left: auto; /* Center the button horizontally within its container */
 }
 
-/*
-.submit_btn 
-    padding: 10px 0;
-    color: #fff;
-    outline: none;
-    background: yellow; 
-    border: 1px solid #fff;
-    width: 100%;
-    cursor: pointer;
-
-*/
 
 input:focus~label,input:valid~label{
     top: -35px;

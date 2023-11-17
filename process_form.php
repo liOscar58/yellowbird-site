@@ -5,15 +5,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $message = $_POST["message"];
 
-    $to = "contact@yellowbirddx.com"; // Replace with your email address
-    $subject = "New Contact Form Submission";
-    $headers = "From: $email";
+    $mailTo = "contact@yellowbirddx.com";
+    $headers = "From: " .$email;
 
-    $mailBody = "Name: $name\n";
-    $mailBody .= "Phone Number: $number\n";
-    $mailBody .= "Email: $email\n";
-    $mailBody .= "Message:\n$message";
-
+    $txt = "You have received an e-mail from " .$name.".\n\n".$message;
+    mail($email, $number, $message, $headers);
+    header("Location: index.html?mailsend");
     // Send email
     $success = mail($to, $subject, $mailBody, $headers);
     // Check if the email was sent successfully
