@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $message = $_POST["message"];
 
-    $mailTo = "contact@yellowbirddx.com";
+    $mailTo = "oli055@uottawa.ca";
     $headers = "From: " .$email;
 
     $txt = "You have received an e-mail from " .$name.".\n\n".$message;
