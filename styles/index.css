@@ -66,6 +66,20 @@ body{
 .navbar-links a:hover {
     text-decoration: underline;
 }
+@media (max-width: 768px) {
+  .navbar {
+      height: 30px; /* Adjust the height for smaller screens */
+  }
+
+  .navbar li {
+      margin: 0 10px; /* Adjust spacing for smaller screens */
+  }
+
+  .logo img {
+      width: 20px;
+      height: 20px;
+  }
+}
 
 /* Center the content within the container */
 .image-container {
@@ -80,7 +94,7 @@ body{
   }
   /* Add a class for the centered image and set max-width and max-height */
   .centered-image {
-    max-width: 750px; /* Set your desired maximum width in pixels */
+    max-width: 70%; /* Set your desired maximum width in pixels */
     max-height: auto; /* Set your desired maximum height in pixels */
     margin: 0 auto; /* Center the image horizontally */
     display: block; /* Make the image a block element */
@@ -141,6 +155,31 @@ body{
     font-size: 20px;
     color: #fff;
   }
+  @media (max-width: 768px) {
+    .centered-content h4,
+    .image-with-text p,
+    .image-with-text-2 p {
+        font-size: 16px; /* Adjust the font size for better readability on small screens */
+        margin: 5px 10px; /* Set a margin between words and the edge of the screen */
+    }
+
+    .image-with-text img,
+    .image-with-text-2 img {
+        min-width: 30px; /* Adjust the minimum width of images for better spacing */
+        margin: 0 10px 0 0; /* Adjust the margin around images for better spacing */
+    }
+
+    .centered-heading {
+        font-size: 1.5em; /* Adjust the font size for better readability on small screens */
+        margin-bottom: 10px; /* Adjust the margin between centered-heading and image-with-text */
+    }
+
+    .image-with-text,
+    .image-with-text-2 {
+        max-width: 100%; /* Adjust the maximum width for better responsiveness */
+        padding: 0 10px; /* Add padding to the sides for space between content and the edge of the screen */
+    }
+}
 
 .container{
     max-width: 1200px;
@@ -286,6 +325,13 @@ section .header{
     color: #ccc;
     margin-bottom: 0.5rem;
   }
+  /* Media query for screens smaller than 768px (typical mobile screens) */
+@media (max-width: 768px) {
+  .features {
+      grid-template-columns: 1fr; /* Display one column for small screens */
+  }
+}
+
 
   
   .container {
