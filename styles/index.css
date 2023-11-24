@@ -90,6 +90,7 @@ body{
   }
   .left-image {
     max-width: 25px; /* Set your desired maximum width */
+    margin-right: 30px;
     height: auto;
 }
   
@@ -200,6 +201,8 @@ header{
     align-items: center;
     gap: 2rem;
 }
+
+
 
 header .content h2{
     color: #fff;
