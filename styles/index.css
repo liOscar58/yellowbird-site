@@ -86,11 +86,10 @@ body{
     display: flex;
     justify-content: center; /* Horizontal centering */
     align-items: center;     /* Vertical centering */
-    margin-top: 20px;
+    margin-top: 60px;
   }
   .left-image {
     max-width: 25px; /* Set your desired maximum width */
-    margin-right: 30px;
     height: auto;
 }
   
@@ -191,6 +190,7 @@ body{
     max-width: 1200px;
     margin: auto;
     padding: 2rem;
+    margin-bottom: 100px;
 }
 
 header{
