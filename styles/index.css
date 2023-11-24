@@ -114,7 +114,8 @@ body{
   .centered-content h4 {
     font-size: larger;
     color: #ffffff;
-    margin: 5px 0px 150px; /* Remove default margins to control spacing */
+    margin: 5px 0px 0px; /* Remove default margins to control spacing */
+
   }
 
   .centered-heading {
@@ -427,10 +428,10 @@ section .header{
   margin-top: 20px;
   font-size: 1.4em;;
 }
-
-.header2 h1 {
-  color: #fff; /* Set the desired text color */
+.image-container {
+  margin-bottom: 50px;
 }
+
 
 
 form{
@@ -466,6 +467,7 @@ label{
     cursor: text;
     transition: 0.2s ease;
 }
+
 
 .submit_btn {
   padding: 10px 0;
