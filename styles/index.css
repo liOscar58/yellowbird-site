@@ -86,7 +86,7 @@ body{
     display: flex;
     justify-content: center; /* Horizontal centering */
     align-items: center;     /* Vertical centering */
-    margin-top: 60px;
+    margin-top: 100px;
   }
   .left-image {
     max-width: 25px; /* Set your desired maximum width */
