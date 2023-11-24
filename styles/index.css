@@ -122,7 +122,7 @@ body{
     text-align: center;
     font-size: 2em; /* Adjust the font size as needed */
     color: #ffffff; /* White color */
-    margin-bottom: 0; /* Remove the margin between centered-heading and image-with-text */
+ /* Remove the margin between centered-heading and image-with-text */
 }
 
 .image-with-text {

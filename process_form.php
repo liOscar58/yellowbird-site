@@ -1,20 +1,17 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
-    $number = $_POST["number"];
     $email = $_POST["email"];
     $message = $_POST["message"];
+    $number = $_POST["number"];
 
-    $mailTo = "";
+    $to = "lioscar58@gmail.com";
     $headers = "From: " .$email;
 
-    $txt = "You have received an e-mail from " .$name.".\n\n".$message;
-    mail($email, $number, $message, $headers);
-    header("Location: index.html?mailsend");
-    // Send email
-    $success = mail($to, $subject, $mailBody, $headers);
-    // Check if the email was sent successfully
-    if ($success) {
+    $txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message; 
+    $headers = "From: noreply@yoursite.com" . "\r\n" ."CC: somebodyelse@example.com";
+    if ($email!=NULL) {
+        mail($to,$subject,$txt,$headers);
         // Display a thank you message
         echo "<p>Thank you for your submission! We will get back to you shortly.</p>";
     } else {
