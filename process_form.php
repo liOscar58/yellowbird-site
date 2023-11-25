@@ -6,8 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $number = $_POST["number"];
 
     $to = "lioscar58@gmail.com";
+    $subject = "Mail From website";
     $headers = "From: " .$email;
-
+    
     $txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message; 
     $headers = "From: noreply@yoursite.com" . "\r\n" ."CC: somebodyelse@example.com";
     if ($email!=NULL) {
